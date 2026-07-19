@@ -4,7 +4,7 @@
 This is a development CSS file which is built to a minified
 production stylesheet in assets/built/screen.css
 
-20260604 Mostly still Source original, will mark changes with "DXB". Theme-specific overrides of Ghost core vars (eg --gh-font-body) replaced with --ja (eg --ja-font-body)
+Customized Theme-specific variables & classes include ja (eg --color-ja-purple)
 
 1. Variables
     1.1 JAlam Variables
@@ -54,7 +54,44 @@ production stylesheet in assets/built/screen.css
 /* 1. Variables
 /* ---------------------------------------------------------- */
 
+/* 1.1. JAlam Variables *//*DXB*/
+
 :root {
+
+    --ja-font-body: "IM Fell", Georgia, Times, serif;
+
+/* Color Palette */
+
+/*#302365 rgb(48, 35, 101) Purple (West Seattle Gothic)*/
+
+    --color-ja-purple: rgb(48, 35, 101);
+    --color-ja-purple-fade: rgb(48, 35, 101 / 0.7); /*On Cream 4.68:1 contrast, text ok*/
+    --color-ja-purple-lacroix: rgb(48 35 101 / 0.2); /*On Cream 1.3:1 contrast, decor only. Source original uses a 1.2:1 contrast gray for --color-border*/
+
+/*#ffefcc rgb(255, 239, 204) Cream (Abandoned Mall)
+Might need to make lighter, eg #FFF0D1 (230 opacity) or #FFF5E2 (145 opacity)*/
+
+    --color-ja-cream: rgb(255, 239, 204);
+
+/*#175759 rgb(23, 87, 89) Green (476 Barbary)*/
+
+    --color-ja-green: rgb(23, 87, 89);
+
+/*#ff9900 rgb(255, 153, 0) Orange (Overlook)*/
+
+    --color-ja-orange: rgb(255, 153, 0);
+
+/*
+Alternates, not currently in use
+
+#ffd67c rgb(255, 214, 124) Yellow (Amityville)
+#4b4778 rgb(75, 71, 120) Soft Purple (Hill House)
+#a896cd rgb(168, 150, 205) Lavender (Manderly)
+#bf96cd rgb(191, 150, 205) Lt Violet (Dream House)
+*/
+
+/* 1.2. Source Theme Variables */
+
     --color-white: #fff;
     --color-lighter-gray: rgb(0 0 0 / 0.05);
     --color-light-gray: #e6e6e6;
@@ -62,6 +99,16 @@ production stylesheet in assets/built/screen.css
     --color-dark-gray: #444;
     --color-darker-gray: #15171a;
     --color-black: #000;
+
+    --ghost-accent-color: var(--color-ja-purple); /*Ghost calls primary theme color "accent"*/
+    --background-color: var(--color-ja-cream); 
+
+    --color-primary-text: var(--color-ja-purple);
+    --color-secondary-text: var(--color-ja-purple-fade); /*Used for support text eg form field descrip*/
+    --color-border: var(--color-ja-purple-lacroix);
+    --color-dark-border: var(--color-ja-purple-fade);
+
+    --font-serif: var(--ja-font-body);
     --font-sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     --font-serif-alt: Georgia, Times, serif;
     --font-mono: "JetBrains Mono", Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace;
@@ -78,57 +125,6 @@ production stylesheet in assets/built/screen.css
     --color-border: rgb(255 255 255 / 0.15);
     --color-dark-border: rgb(255 255 255 / 0.5);
 }
-
-/* 1.1. JAlam Variables *//*DXB*/
-
-/* Color Palette */
-/*
-Primary Dark ("Accent")
-#302365 rgb(48, 35, 101) Purple (West Seattle Gothic)
-
-Primary Light ("Background")
-#ffefcc rgb(255, 239, 204) Cream (Abandoned Mall)
-Might need to make lighter, eg #FFF0D1 (230 opacity) or #FFF5E2 (145 opacity)
-
-Primary Highlight
-#175759 rgb(23, 87, 89) Green (476 Barbary)
-
-Secondary Highlight
-#ff9900 rgb(255, 153, 0) Orange (Overlook)
-
-Alternates
-
-#ffd67c rgb(255, 214, 124) Yellow (Amityville)
-#4b4778 rgb(75, 71, 120) Soft Purple (Hill House)
-#a896cd rgb(168, 150, 205) Lavender (Manderly)
-#bf96cd rgb(191, 150, 205) Lt Violet (Dream House)
-*/
-
-
-:root {
-    --font-serif: "IM Fell", Georgia, Times, serif;
-    --ja-font-body: "IM Fell", Georgia, Times, serif;
-
-    --ghost-accent-color: #302365;
-    --background-color: #ffefcc; 
-
-    --color-primary-text: #302365; /*WSGoth*/
-    --color-secondary-text: rgb(48, 35, 101 / 0.7); /*WSGoth at 70% on Mall 4.68:1 contrast*/
-    --color-border: rgb(48 35 101 / 0.08); /*WSGoth at 0.08*/
-    --color-dark-border: rgb(48 35 101 / 0.55); /*WSGoth at 0.55*/
-
-}
-
-:root.has-light-text,
-:is(.gh-navigation, .gh-footer).has-accent-color {
-    --color-lighter-gray: rgb(255 255 255 / 0.1);
-    --color-darker-gray: #fff;
-    --color-secondary-text: rgb(255 255 255 / 0.64);
-    --color-border: rgb(255 255 255 / 0.15);
-    --color-dark-border: rgb(255 255 255 / 0.5);
-}
-
-
 
 /* 2. Fonts
 /* ---------------------------------------------------------- */
