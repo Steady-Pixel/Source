@@ -26,8 +26,7 @@
     "gpm": {
         "type": "theme",
         "categories": [
-            "Minimal",
-            "Magazine"
+            "Minimal"
         ]
     },
     "keywords": [
@@ -40,7 +39,7 @@
         "url": "https://github.com/Steady-Pixel/Source.git"
     },
     "bugs": "https://github.com/Steady-Pixel/Source/issues",
-    "contributors": "https://github.com/TryGhost/Source/graphs/contributors",
+    "contributors": ["https://github.com/TryGhost/Source/graphs/contributors"],
     "devDependencies": {
         "@tryghost/release-utils": "0.8.1",
         "@tryghost/theme-translations": "~0.0.16",
@@ -63,6 +62,7 @@
         "defaults"
     ],
     "config": {
+        "accent_color": "#302365",
         "posts_per_page": 12,
         "image_sizes": {
             "xs": {
@@ -93,7 +93,7 @@
                     "Logo on the left",
                     "Stacked"
                 ],
-                "default": "Logo in the middle"
+                "default": "Logo on the left"
             },
             "site_background_color": {
                 "type": "color",
@@ -105,7 +105,7 @@
                     "Background color",
                     "Accent color"
                 ],
-                "default": "Background color"
+                "default": "Accent color"
             },
             "signup_heading": {
                 "type": "text",

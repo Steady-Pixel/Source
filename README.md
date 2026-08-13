@@ -1,3 +1,14 @@
+# JordanAlam.com Theme Instructions
+As much of the theme is set to reasonable defaults as possible, but there are a few items that must be done manually.
+
+1. Create a page called Home
+2. Upload the included route.yaml file in Admin UI > Settings > Labs > Routes
+
+
+
+
+
+
 # Source
 
 The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Source! If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Source/releases) page.
