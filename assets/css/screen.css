@@ -60,6 +60,16 @@ Customized Theme-specific variables & classes include ja (eg --color-ja-purple)
 
     --ja-font-body: "IM Fell", Georgia, Times, serif;
 
+    /*TODO: update font-size rules throughout sheet to use standard set of variables. Overall sizes need to go up bc font change from clean sans serif to spooky old-fashioned serif. This is a starting point, will need to be tweaked with a clamp calculator and then tested on real text*/
+    
+    --text-sm:   clamp(1.4rem, 0.5vw + 1.2rem, 1.6rem);  /* labels, tags, metadata, captions, excerpts */
+    --text-base: clamp(1.6rem, 0.5vw + 1.4rem, 1.9rem);  /* body, navigation, footer */
+    --text-md:   clamp(1.9rem, 0.8vw + 1.5rem, 2.4rem);  /* content, descriptions, card titles */
+    --text-xl:   clamp(2.4rem, 1.2vw + 1.8rem, 3.2rem);  /* logos, section heads */
+    --text-2xl:  clamp(3.0rem, 1.82vw + 2.27rem, 4.6rem); /* article titles */
+    --text-3xl:  clamp(2.8rem, 1.36vw + 2.25rem, 4.0rem); /* hero/CTA */
+
+
 /* Color Palette */
 
 /*#302365 rgb(48, 35, 101) Purple (West Seattle Gothic)*/
@@ -211,9 +221,9 @@ a:hover {
     font-weight: 600;
     letter-spacing: -0.004em;
     line-height: 1;
-    color: var(--color-white);
+    color: var(--color-ja-cream);
     cursor: pointer;
-    background-color: var(--ghost-accent-color);
+    background-color: var(--color-ja-green);
     border: 0;
     border-radius: 100px;
 }
@@ -500,7 +510,7 @@ body[class*=" gh-font-heading"]:not(.gh-font-heading-fira-sans):not(.gh-font-hea
 }
 
 .gh-navigation-logo img {
-    max-height: 40px;
+    max-height: 80px;
 }
 
 .gh-navigation-menu {
@@ -593,8 +603,8 @@ body[class*=" gh-font-heading"]:not(.gh-font-heading-fira-sans):not(.gh-font-hea
 }
 
 .gh-navigation.has-accent-color .gh-button {
-    background-color: #fff;
-    color: #15171a;
+    background-color: var(--color-ja-orange);
+    color: var(--color-ja-purple);
 }
 
 /* 6.2. Navigation layouts */
@@ -2138,7 +2148,7 @@ Search                         LOGO                    Login Subscribe
 /* 14.3. Home template */
 
 .home-template figure.kg-card.kg-image-card {max-width: 50%; }
-.home-template img {aspect-ratio:1/1; object-fit:cover;}
+.home-template .gh-content img {aspect-ratio:1/1; object-fit:cover;}
 
 .home-template .gh-article-header {
     margin-block: 72px 32px;
@@ -2429,6 +2439,9 @@ blockquote.kg-blockquote-alt {
     text-align: center;
     font-size: 1em;
     line-height: 1.2em;
+    font-family: var(--font-serif);
+    color: var(--color-ja-cream);
+    background-color: var(--color-ja-green);
 }
 
 /* Header */
@@ -2788,7 +2801,7 @@ figcaption a {
 
 :is(.has-serif-title,.has-mono-title):not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) :is(.gh-button, .gh-form, .gh-form-input),
 body[class*=" gh-font-heading"]:not(.gh-font-heading-fira-sans):not(.gh-font-heading-inter):not(.gh-font-heading-manrope):not(.gh-font-heading-noto-sans):not(.gh-font-heading-nunito):not(.gh-font-heading-poppins):not(.gh-font-heading-roboto):not(.gh-font-heading-space-grotesk) :is(.gh-button, .gh-form, .gh-form-input) {
-    border-radius: 0;
+    border-radius: 5px;
 }
 
 .has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .gh-cta-title {
@@ -2819,8 +2832,8 @@ body[class*=" gh-font-heading"]:not(.gh-font-heading-fira-sans):not(.gh-font-hea
 }
 
 .gh-footer.has-accent-color .gh-button {
-    background-color: #fff;
-    color: #15171a;
+    background-color: var(--color-ja-orange);
+    color: var(--color-ja-purple);
 }
 
 /* 21.2. Footer bar */

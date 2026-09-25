@@ -39,7 +39,9 @@
         "url": "https://github.com/Steady-Pixel/Source.git"
     },
     "bugs": "https://github.com/Steady-Pixel/Source/issues",
-    "contributors": ["https://github.com/TryGhost/Source/graphs/contributors"],
+    "contributors": [
+        "https://github.com/TryGhost/Source/graphs/contributors"
+    ],
     "devDependencies": {
         "@tryghost/release-utils": "0.8.1",
         "@tryghost/theme-translations": "~0.0.16",
