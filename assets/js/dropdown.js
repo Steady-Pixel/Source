@@ -20,7 +20,7 @@ function dropdown() {
         if (mediaQuery.matches) return;
         const submenuItems = [];
 
-        while ((nav.offsetWidth + 64) > menu.offsetWidth) {
+        while ((nav.offsetWidth + 10) > menu.offsetWidth) {
             if (nav.lastElementChild) {
                 submenuItems.unshift(nav.lastElementChild);
                 nav.lastElementChild.remove();
